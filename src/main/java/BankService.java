@@ -5,10 +5,20 @@ public class BankService {
     void transfer(Account accountFrom, Account accountTo, BigDecimal amount)  {
         //////
 
-        BigDecimal AmountTo = accountTo.getBalance();
-        BigDecimal AmountFrom = accountFrom.getBalance();
+        BigDecimal accountToBalance = accountTo.getBalance();
+        BigDecimal accountFromBalance = accountFrom.getBalance();
 
+        try {
+            accountToBalance.add(amount);
+            accountFromBalance.subtract(amount);
+        }
 
+        catch(IllegalArgumentException e) {
+            System.out.println(e);
+        }
+
+        System.out.println("balance accountFrom: " +accountFromBalance);
+        System.out.println("balance accountTo: "+ accountToBalance);
 
     }
 
