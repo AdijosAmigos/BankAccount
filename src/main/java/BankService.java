@@ -8,12 +8,14 @@ public class BankService {
         BigDecimal accountToBalance = accountTo.getBalance();
         BigDecimal accountFromBalance = accountFrom.getBalance();
 
+        accountToBalance.add(amount);
+
         try {
-            accountToBalance.add(amount);
             accountFromBalance.subtract(amount);
         }
         catch(IllegalArgumentException e) {
             System.out.println(e);
+            System.out.println("insufficient funds in your account");
         }
         finally {
             System.out.println("balance accountFrom: " +accountFromBalance);
