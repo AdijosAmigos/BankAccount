@@ -1,6 +1,6 @@
 import java.math.BigDecimal;
 
-public class BankService {
+public class BankService implements Operations{
 
     void transfer(Account accountFrom, Account accountTo, BigDecimal amount)  {
         //////
