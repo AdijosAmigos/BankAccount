@@ -16,10 +16,10 @@ public class BankService {
         catch(IllegalArgumentException e) {
             System.out.println(e);
             System.out.println("insufficient funds in your account");
+            System.out.println("you need: "+amount);
         }
         finally {
-            System.out.println("balance accountFrom: " +accountFromBalance);
-            System.out.println("balance accountTo: "+ accountToBalance);
+            System.out.println("your balance: " +accountFromBalance);
         }
 
 
