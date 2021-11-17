@@ -2,7 +2,8 @@ import java.math.BigDecimal;
 
 public interface Operations {
 
-    public abstract BigDecimal getBalance(BigDecimal balance);
+    // geter zadeklarowany w BankService
+    // public abstract BigDecimal getBalance(BigDecimal balance);
 
     public abstract void makeTransfer(Account account1, Account account2, BigDecimal amount);
 
