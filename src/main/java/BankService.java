@@ -15,7 +15,7 @@ public class BankService implements Operations{
         }
         catch(IllegalArgumentException e) {
             System.out.println(e);
-            System.out.println("insufficient funds in your account");
+            System.out.println("amount must be > 0");
             System.out.println("you need: "+amount);
         }
         finally {
