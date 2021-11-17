@@ -12,13 +12,14 @@ public class BankService {
             accountToBalance.add(amount);
             accountFromBalance.subtract(amount);
         }
-
         catch(IllegalArgumentException e) {
             System.out.println(e);
         }
+        finally {
+            System.out.println("balance accountFrom: " +accountFromBalance);
+            System.out.println("balance accountTo: "+ accountToBalance);
+        }
 
-        System.out.println("balance accountFrom: " +accountFromBalance);
-        System.out.println("balance accountTo: "+ accountToBalance);
 
     }
 
