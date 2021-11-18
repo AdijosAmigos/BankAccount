@@ -1,53 +1,21 @@
 import java.math.BigDecimal;
+import java.util.function.BiFunction;
 
-public class BankService implements Operations{
+public class BankService{
 
     void transfer(Account accountFrom, Account accountTo, BigDecimal amount)  {
         //////
 
-        BigDecimal accountToBalance = accountTo.getBalance();
-        BigDecimal accountFromBalance = accountFrom.getBalance();
-
-        accountToBalance.add(amount);
-
-        try {
-            accountFromBalance.subtract(amount);
-        }
-        catch(IllegalArgumentException e) {
-            System.out.println(e);
-            System.out.println("amount must be > 0");
-            System.out.println("you need: "+amount);
-        }
-        finally {
-            System.out.println("your balance: " +accountFromBalance);
+        if(amount.compareTo(BigDecimal.ZERO)<0){
+            throw new IllegalArgumentException("Amount not bigger than 0");
         }
 
+        //if(accountFrom.getBalance()<amount){wyjatek}
 
-    }
 
-    public class Account {
-        private int id;
-        private BigDecimal balance;
+        accountFrom.debit(amount);
+        accountTo.credit(amount);
 
-        public Account(int id, BigDecimal balance){
-
-        }
-
-        public int getId() {
-            return id;
-        }
-
-        public void setId(int id) {
-            this.id = id;
-        }
-
-        public BigDecimal getBalance() {
-            return balance;
-        }
-
-        public void setBalance(BigDecimal balance) {
-            this.balance = balance;
-        }
     }
 
     public BankService() {

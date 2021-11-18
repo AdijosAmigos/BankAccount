@@ -11,6 +11,8 @@ public interface Operations {
 
     public abstract void payBill (Account accountFrom, AccountOwner accountOwner, Account accountTo, BigDecimal amount);
 
+    public abstract BigDecimal withdraw(BigDecimal amount);
+
 
 
 
