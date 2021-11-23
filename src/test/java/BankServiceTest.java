@@ -22,7 +22,7 @@ class BankServiceTest {
 
     }
 
-    @Test(expected=IllegalArgumentException.class)
+    @Test
     void should_throw_exepction_when_amount_less_than_zero_secound_methood(){
         // given
         Account account1 = new Account(1, new BigDecimal(1000));
