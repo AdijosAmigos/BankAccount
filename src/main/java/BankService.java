@@ -12,6 +12,10 @@ public class BankService{
 
         //if(accountFrom.getBalance()<amount){wyjatek}
 
+        if(amount.compareTo(BigDecimal.valueOf(amount))){
+            throw new IllegalArgumentException("balance not enought to do transaction");
+        }
+
 
         accountFrom.debit(amount);
         accountTo.credit(amount);
