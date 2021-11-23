@@ -51,5 +51,18 @@ class BankServiceTest {
         Assertions.assertThat(account2.getBalance()).isEqualTo(new BigDecimal(3001));
     }
 
+    //zadanie domowe 1
+    @Test
+    void should_throw_exepction_when_account_balance_less_than_amount(){
+        //given
+        Account account1 = new Account(1, new BigDecimal(1000));
+        Account account2 = new Account(2, new BigDecimal(2000));
+        BankService bankService = new BankService();
+        //when
+        bankService.transfer(account1, account2, new BigDecimal(2000));
+        //then
+        Assertions.ass()
+    }
+
 
 }

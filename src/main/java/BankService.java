@@ -13,7 +13,7 @@ public class BankService{
         //if(accountFrom.getBalance()<amount){wyjatek}
 
         if(amount.compareTo(accountFrom.getBalance()) <= 0){
-            throw new IllegalArgumentException("balance not enought to do transaction");
+            throw new IllegalArgumentException("Balance not enought to do transaction");
         }
 
 
