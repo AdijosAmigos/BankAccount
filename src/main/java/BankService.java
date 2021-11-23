@@ -6,13 +6,13 @@ public class BankService{
     void transfer(Account accountFrom, Account accountTo, BigDecimal amount)  {
         //////
 
-        if(amount.compareTo(BigDecimal.ZERO) < 0) {
+        if(amount.compareTo(BigDecimal.ZERO) < 0){
             throw new IllegalArgumentException("Amount not bigger than 0");
         }
 
         //if(accountFrom.getBalance()<amount){wyjatek}
 
-        if(amount.compareTo(accountFrom.getBalance()) <= 0) {
+        if(amount.compareTo(accountFrom.getBalance()) <= 0){
             throw new IllegalArgumentException("balance not enought to do transaction");
         }
 
