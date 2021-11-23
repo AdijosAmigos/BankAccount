@@ -10,11 +10,15 @@ public class BankService{
             throw new IllegalArgumentException("Amount not bigger than 0");
         }
 
+        // po 1,5h probowania zmieniłem kolejnosc w comparTo i zaczeło działac ale dlaczego?
         /*
+
         //if(accountFrom.getBalance()<amount){wyjatek}
+
         if(amount.compareTo(accountFrom.getBalance()) <= 0){
             throw new IllegalArgumentException("Balance not enought to do transaction");
         }
+
         */
 
         if(accountFrom.getBalance().compareTo(amount)<=0){
