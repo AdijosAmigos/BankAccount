@@ -101,14 +101,25 @@ class BankServiceTest {
     void should_debit_metohod_substract_from_balance(){
         //given
         Account account1 = new Account(1, new BigDecimal(1000));
-        Account account2 = new Account(2, new BigDecimal(2000));
         BankService bankService = new BankService();
         //when
-        bankService.transfer(account1, account2, new BigDecimal(400));
+        account1.debit(new BigDecimal(500));
         //then
-        Assertions.assertThat(account1.getBalance().compareTo(new BigDecimal(700)));
-
+        Assertions.assertThat(account1.getBalance()).isEqualTo(new BigDecimal(700));
     }
 
+    //zadanie 5
+    //sprawdzenie czy metoda credit dodaje do balance
+
+    @Test
+    void should_credit_method_add_to_balance(){
+        //given
+        Account account1 = new Account(1, new BigDecimal(1000));
+        BankService bankService = new BankService();
+        //when
+        account1.credit(new BigDecimal(500));
+        //then
+        Assertions.assertThat(account1.getBalance()).isEqualTo(new BigDecimal(1500));
+    }
 
 }
