@@ -10,7 +10,7 @@ public class BankService{
             throw new IllegalArgumentException("Amount not bigger than 0");
         }
 
-        // po 1,5h probowania zmieniłem kolejnosc w comparTo i zaczeło działac ale dlaczego?
+        // po 1,5h probowania zmieniłem kolejnosc w compareTo i zaczeło działac ale dlaczego?
         /*
 
         //if(accountFrom.getBalance()<amount){wyjatek}
