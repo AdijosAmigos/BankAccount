@@ -14,7 +14,7 @@ public class BankService{
             throw new IllegalArgumentException("Balance not enought to do transaction");
         }
 
-        if(amount.compareTo(BigDecimal.ZERO) < 0 && accountFrom.getBalance().compareTo(amount)<=0 ){
+        if(amount.compareTo(BigDecimal.ZERO) < 0 && accountFrom.getBalance().compareTo(amount)<=0){
             bankService.transfer(accountFrom, accountTo, amount);
         }
 
