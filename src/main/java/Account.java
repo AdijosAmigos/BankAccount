@@ -23,10 +23,6 @@ public class Account {
     }
 
 
-    //test dla account
-    //1.
-
-
     public int getId() {
         return id;
     }

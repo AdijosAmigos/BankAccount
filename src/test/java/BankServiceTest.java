@@ -65,6 +65,13 @@ class BankServiceTest {
 
     }
 
+    //zadanie domowe 25.11.2021
+
+    @Test
+    void should_transfer_when_correct_amount_and_enought_money(){
+
+    }
+
 
 
 
