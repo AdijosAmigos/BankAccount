@@ -65,61 +65,8 @@ class BankServiceTest {
 
     }
 
-    //zadanie domowe 2 do sprawdzenia
-    //stworzenie account z ujemnym balance (ma rzucic wyjatek)
 
-    @Test
-    void should_throw_exception_when_create_account_with_balance_less_than_zero(){
-        //givien
-        Account account1 = new Account(1, new BigDecimal(1000));
-        //when
 
-        //then
-        Assertions.assertThatThrownBy(()->account1.getBalance().compareTo(BigDecimal.ZERO))
-                .isInstanceOf(IllegalArgumentException.class)
-                .hasMessage("You can't create account with balance lower than ZERO");
 
-    }
-
-    //zadanie domowe 3 działa?
-    //stworzenie account z ujemnym ID (ma rzucic wyjątek)
-
-    @Test
-    void should_throw_exeption_when_create_account_with_id_less_than_zero(){
-        //given
-        Account account1 = new Account(1, new BigDecimal(1000));
-        //when
-
-        //then
-        Assertions.assertThat(account1.getId()).isGreaterThan(0);
-    }
-
-    //zadanie 4
-    //sprawdzenie czy metoda debit odejmuje od balance
-
-    @Test
-    void should_debit_metohod_substract_from_balance(){
-        //given
-        Account account1 = new Account(1, new BigDecimal(1000));
-        BankService bankService = new BankService();
-        //when
-        account1.debit(new BigDecimal(500));
-        //then
-        Assertions.assertThat(account1.getBalance()).isEqualTo(new BigDecimal(700));
-    }
-
-    //zadanie 5
-    //sprawdzenie czy metoda credit dodaje do balance
-
-    @Test
-    void should_credit_method_add_to_balance(){
-        //given
-        Account account1 = new Account(1, new BigDecimal(1000));
-        BankService bankService = new BankService();
-        //when
-        account1.credit(new BigDecimal(500));
-        //then
-        Assertions.assertThat(account1.getBalance()).isEqualTo(new BigDecimal(1500));
-    }
 
 }
