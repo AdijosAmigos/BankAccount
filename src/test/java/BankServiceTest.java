@@ -66,13 +66,49 @@ class BankServiceTest {
     }
 
     //zadanie domowe 25.11.2021
+    //czy o to chodzilo? to takim sam test jak wyzej
+
+    //--------- DO SPRAWDZENIA ------------//
 
     @Test
     void should_transfer_when_correct_amount_and_enought_money(){
+        //given
+        Account account1 = new Account(1, new BigDecimal(1000));
+        Account account2 = new Account(2, new BigDecimal(2000));
+        BankService bankService = new BankService();
+        //when
+        bankService.transfer(account1, account2, new BigDecimal(10));
+        //then
+
 
     }
 
+    //--------- DO SPRAWDZENIA ------------//
 
+    @Test
+    void should_throw_illegal_argument_exeption_negative_transfer_amount(){
+        //given
+        Account account1 = new Account(1, new BigDecimal(1000));
+        Account account2 = new Account(2, new BigDecimal(2000));
+        BankService bankService = new BankService();
+        //when
+        bankService.transfer(account1, account2, new BigDecimal(-1));
+        //then
+    }
+
+    //--------- DO SPRAWDZENIA ------------//
+
+    @Test
+    void should_throw_illegal_argument_exeption_when_not_enought_money_on_account_from(){
+        //given
+        Account account1 = new Account(1, new BigDecimal(1000));
+        Account account2 = new Account(2, new BigDecimal(2000));
+        BankService bankService = new BankService();
+        //when
+        bankService.transfer(account1, account2, new BigDecimal(10000));
+        //then
+
+    }
 
 
 
