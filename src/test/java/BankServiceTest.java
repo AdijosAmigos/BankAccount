@@ -94,11 +94,9 @@ class BankServiceTest {
         Account account2 = new Account(2, new BigDecimal(2000));
         BankService bankService = new BankService();
         //when
-
+        bankService.transfer(account1, account2, new BigDecimal(-1));
         //then
-        Assertions.assertThatThrownBy(()-> bankService.transfer(account1, account2, new BigDecimal(-1)))
-                .isInstanceOf(IllegalArgumentException.class)
-                .hasMessage("Amount not bigger than 0");
+
     }
 
     //--------- DO SPRAWDZENIA ------------//

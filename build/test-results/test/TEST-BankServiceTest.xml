@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="BankServiceTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2021-11-28T20:21:47" hostname="ADRIAN" time="0.034">
+<testsuite name="BankServiceTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2021-11-29T17:50:00" hostname="ADRIAN" time="0.025">
   <properties/>
-  <testcase name="should_throw_illegal_argument_exeption_when_not_enought_money_on_account_from()" classname="BankServiceTest" time="0.034">
-    <failure message="java.lang.IllegalArgumentException: Balance not enought to do transaction" type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: Balance not enought to do transaction
-	at BankService.transfer(BankService.java:14)
-	at BankServiceTest.should_throw_illegal_argument_exeption_when_not_enought_money_on_account_from(BankServiceTest.java:108)
+  <testcase name="should_throw_illegal_argument_exeption_negative_transfer_amount()" classname="BankServiceTest" time="0.025">
+    <failure message="java.lang.IllegalArgumentException: Amount not bigger than 0" type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: Amount not bigger than 0
+	at BankService.transfer(BankService.java:10)
+	at BankServiceTest.should_throw_illegal_argument_exeption_negative_transfer_amount(BankServiceTest.java:97)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
