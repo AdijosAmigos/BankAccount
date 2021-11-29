@@ -77,8 +77,10 @@ class BankServiceTest {
         Account account2 = new Account(2, new BigDecimal(2000));
         BankService bankService = new BankService();
         //when
-        bankService.transfer(account1, account2, new BigDecimal(10));
+        bankService.transfer(account1, account2, new BigDecimal(100));
         //then
+        Assertions.assertThat(account1.getBalance()).isEqualTo(new BigDecimal(900));
+        Assertions.assertThat(account2.getBalance()).isEqualTo(new BigDecimal(2100));
 
 
     }
@@ -92,8 +94,11 @@ class BankServiceTest {
         Account account2 = new Account(2, new BigDecimal(2000));
         BankService bankService = new BankService();
         //when
-        bankService.transfer(account1, account2, new BigDecimal(-1));
+
         //then
+        Assertions.assertThatThrownBy(()-> bankService.transfer(account1, account2, new BigDecimal(-1)))
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessage("Amount not bigger than 0");
     }
 
     //--------- DO SPRAWDZENIA ------------//
@@ -105,8 +110,9 @@ class BankServiceTest {
         Account account2 = new Account(2, new BigDecimal(2000));
         BankService bankService = new BankService();
         //when
-        bankService.transfer(account1, account2, new BigDecimal(10000));
+        bankService.transfer(account1, account2, new BigDecimal(100));
         //then
+        Assertions.assertThat(account1.getBalance()).isGreaterThanOrEqualTo(BigDecimal.ZERO);
 
     }
 

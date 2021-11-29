@@ -10,7 +10,7 @@ public class BankService{
             throw new IllegalArgumentException("Amount not bigger than 0");
         }
 
-        if(accountFrom.getBalance().compareTo(amount)<=0){
+        if(accountFrom.getBalance().compareTo(amount) < 0){
             throw new IllegalArgumentException("Balance not enought to do transaction");
         }
 
