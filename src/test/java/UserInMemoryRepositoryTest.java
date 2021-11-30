@@ -45,6 +45,7 @@ class UserInMemoryRepositoryTest {
         HashMap<Integer, User> mapa = new HashMap<>();
         User user = new User(1, "adrian", "345678901");
         UserRepository userMemoryRepository = new UserInMemoryRepository(mapa);
+        userMemoryRepository.save(user);
         userMemoryRepository.delete(user);
         //when
         User result = userMemoryRepository.getById(user.getId());

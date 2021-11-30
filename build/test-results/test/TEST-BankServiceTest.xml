@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="BankServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-11-29T18:28:16" hostname="ADRIAN" time="0.019">
-  <properties/>
-  <testcase name="should_throw_illegal_argument_exeption_negative_transfer_amount()" classname="BankServiceTest" time="0.019"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
