@@ -1,6 +1,4 @@
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class UserInMemoryRepository implements UserRepository{
 
@@ -30,7 +28,8 @@ public class UserInMemoryRepository implements UserRepository{
 
     @Override
     public List<User> findAll() {
-
+        Map<Integer, User> map = new HashMap<>(idToUser);
+        
         return null;
     }
 
