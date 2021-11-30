@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 
 public class UserInMemoryRepository implements UserRepository{
@@ -24,11 +25,12 @@ public class UserInMemoryRepository implements UserRepository{
 
     @Override
     public void delete(User user) {
-
+        idToUser.remove(user.getId()); //dopisalem sam
     }
 
     @Override
     public List<User> findAll() {
+
         return null;
     }
 
