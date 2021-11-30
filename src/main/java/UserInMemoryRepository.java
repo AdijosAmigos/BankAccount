@@ -22,14 +22,15 @@ public class UserInMemoryRepository implements UserRepository{
     }
 
     @Override
-    public void delete(User user) {
+    public User delete(User user) {
         idToUser.remove(user.getId()); //dopisalem sam
+        return user;
     }
 
     @Override
     public List<User> findAll() {
         Map<Integer, User> map = new HashMap<>(idToUser);
-        
+
         return null;
     }
 
