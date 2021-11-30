@@ -49,8 +49,8 @@ class UserInMemoryRepositoryTest {
         //when
         User result = userInMemoryRepository.delete(user);
         //then
-        Assertions.assertThat(result).isNotEqualTo(user);
-        Assertions.assertThat(mapa.containsKey(user.getId())).isFalse();
+        Assertions.assertThat(mapa.isEmpty()).isTrue();
+
 
     }
 
