@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="UserInMemoryRepositoryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-11-30T20:54:31" hostname="ADRIAN" time="0.062">
+<testsuite name="UserInMemoryRepositoryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-12-01T17:41:18" hostname="DESKTOP-I4GU1TF" time="0.792">
   <properties/>
-  <testcase name="should_delete_user()" classname="UserInMemoryRepositoryTest" time="0.062"/>
+  <testcase name="should_return_user_by_id()" classname="UserInMemoryRepositoryTest" time="0.792"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
