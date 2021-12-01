@@ -17,12 +17,6 @@ public class BankService{
         if(amount.compareTo(BigDecimal.ZERO) < 0 && accountFrom.getBalance().compareTo(amount)<=0){
             bankService.transfer(accountFrom, accountTo, amount);
         }
-        /*
-        else{
-            throw new IllegalArgumentException();
-        }
-        */
-
 
 
         accountFrom.debit(amount);

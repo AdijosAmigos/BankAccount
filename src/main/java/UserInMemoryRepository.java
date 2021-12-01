@@ -29,9 +29,8 @@ public class UserInMemoryRepository implements UserRepository{
 
     @Override
     public List<User> findAll() {
-        Map<Integer, User> map = new HashMap<>(idToUser);
-
-        return null;
+        List<User> list = new ArrayList<User>(idToUser.values());
+        return list;
     }
 
 }

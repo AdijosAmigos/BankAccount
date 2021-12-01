@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Test;
 
 
 import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -51,7 +53,19 @@ class UserInMemoryRepositoryTest {
         //then
         Assertions.assertThat(mapa.isEmpty()).isTrue();
 
+    }
 
+    @Test
+    void should_finAll_users(){
+        //given
+        HashMap<Integer, User> mapa = new HashMap<Integer, User>();
+        User user = new User(1, "adrian", "345678901");
+        UserRepository userInMemoryRepository = new UserInMemoryRepository(mapa);
+        userInMemoryRepository.save(user);
+        //when
+        List<User> userList = userInMemoryRepository.findAll();
+        //then
+        Assertions.assertThat(userList.size()).isGreaterThan(0);
     }
 
 }

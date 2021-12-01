@@ -5,6 +5,7 @@ public class User {
     private final String name;
     private final String phone;
 
+
     public User(int id, String name, String phone) {
         this.id = id;
         this.name = name;
