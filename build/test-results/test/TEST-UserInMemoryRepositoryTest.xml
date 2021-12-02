@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="UserInMemoryRepositoryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-12-01T19:09:17" hostname="DESKTOP-I4GU1TF" time="0.272">
-  <properties/>
-  <testcase name="should_finAll_users()" classname="UserInMemoryRepositoryTest" time="0.272"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

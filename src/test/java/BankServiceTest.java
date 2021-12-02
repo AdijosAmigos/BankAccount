@@ -94,8 +94,10 @@ class BankServiceTest {
         Account account2 = new Account(2, new BigDecimal(2000));
         BankService bankService = new BankService();
         //when
-        bankService.transfer(account1, account2, new BigDecimal(1));
+        bankService.transfer(account1, account2, new BigDecimal(-1));
         //then
+        //dopisac asercje
+
 
     }
 
@@ -108,7 +110,7 @@ class BankServiceTest {
         Account account2 = new Account(2, new BigDecimal(2000));
         BankService bankService = new BankService();
         //when
-        bankService.transfer(account1, account2, new BigDecimal(100));
+        bankService.transfer(account1, account2, new BigDecimal(10000));
         //then
         Assertions.assertThat(account1.getBalance()).isGreaterThanOrEqualTo(BigDecimal.ZERO);
 
